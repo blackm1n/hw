@@ -30,7 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'blackm1n.pythonanywhere.com'
+    'blackm2n.pythonanywhere.com'
 ]
 
 
@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'Problem_1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blackm1n$default',
-        'USER': 'blackm1n',
+        'NAME': 'blackm2n$default',
+        'USER': 'blackm2n',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': 'blackm1n.mysql.pythonanywhere-services.com',
         'OPTIONS': {
