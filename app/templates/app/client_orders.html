@@ -1,0 +1,18 @@
+<h1>Заказы {{ name }}</h1>
+<br>
+{% for order in orders %}
+    <h2>Заказ {{ order.id }}</h2>
+    <ul>
+        {% for product in order.products.all %}
+        <li>
+            <h3>Продукт {{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <p>Цена: {{ product.price }}</p>
+            <p>Количество: {{ product.count }}</p>
+            <p>Дата добавления: {{ product.date_created }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <p>Общая цена: {{ order.total_price }}</p>
+    <p>Дата заказа: {{ order.date_ordered }}</p>
+{% endfor %}
